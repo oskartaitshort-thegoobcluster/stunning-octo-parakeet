@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GD Level Downloads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f1220;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #161a33;
+      padding: 20px;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+    .level {
+      background: #1c2045;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    .level h2 {
+      margin: 0 0 5px 0;
+      color: #ffd36c;
+    }
+    .level a {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: #6cf2c2;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .level a:hover {
+      background: #55cfa6;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Header is now empty -->
+  </header>
+
+  <main id="level-list">
+    <!-- Levels will appear here -->
+  </main>
+
+  <footer>
+    All downloads are for fun/showcase purposes. Not affiliated with RobTop.
+  </footer>
+
+  <script>
+    const levels = [
+      "Stereo Madness.gdr",
+      "Back On Track.gdr",
+      "Polargeist.gdr",
+      "Dry Out.gdr",
+      "Base After Base.gdr",
+      "Cant Let Go.gdr",
+      "Jumper.gdr",
+      "Time Machine.gdr",
+      "Cycles.gdr",
+      "Xstep.gdr",
+      "Clutterfunk.gdr",
+      "Theory Of Everything.gdr",
+      "Electroman Adventures.gdr",
+      "Clubstep.gdr",
+      "Electrodynamix.gdr",
+      "Blast Processing.gdr",
+      "Theory Of Everything 2.gdr",
+      "Geometrical Dominator.gdr",
+      "Deadlocked.gdr",
+      "Fingerdash.gdr",
+      "Dash.gdr",
+      "Bloodbath.gdr"
+    ];
+
+    const list = document.getElementById("level-list");
+
+    levels.forEach(level => {
+      const div = document.createElement("div");
+      div.className = "level";
+      div.innerHTML = `
+        <h2>${level.replace(".gdr","")}</h2>
+        <a href="macros/${level}" download>Download</a>
+      `;
+      list.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>
